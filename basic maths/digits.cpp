@@ -115,23 +115,76 @@
 
 //find all the divisers 
 
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//     vector<int> v;
+//     cin>>n;
+//     for(int i=1;i*i<=n;i++){
+//     if(n%i==0){
+//     v.push_back(i);
+//     if(n/i!=i){
+//         v.push_back(n/i);
+//     }
+//     }
+//     }
+
+//     sort(v.begin(),v.end());
+
+//     for(auto it:v)cout <<it <<" ";
+// }
+
+
+
+
+//find prime numbers
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int n;
+//      vector<int>v;
+//      int count;
+//      cin>>n;
+//      for(int i=1;i*i<=n;i++){
+//       if(n%i==0){
+//         count++;
+//         if(n/i!=i){
+//             count++;
+//         }
+//       }
+//      }
+//      if(count==2){
+//         cout<<"true";
+//      }else{
+//         cout<<"false";
+//      }
+
+//      return 0;
+// }
+
+
+//gretest common devider 
+
+#include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int n;
-    vector<int> v;
-    cin>>n;
-    for(int i=1;i*i<=n;i++){
-    if(n%i==0){
-    v.push_back(i);
-    if(n/i!=i){
-        v.push_back(n/i);
-    }
-    }
+    int x,y;
+    cin >>x>>y;
+
+    while(x>0&&y>0){
+        if(x>y){
+          x=x%y;
+        }else if(y>x){
+            y=y%x;
+        }
     }
 
-    sort(v.begin(),v.end());
+    if(x==0){
+     cout <<y;
+    }else{
+        cout <<x;
+    }
 
-    for(auto it:v)cout <<it <<" ";
 }
-
