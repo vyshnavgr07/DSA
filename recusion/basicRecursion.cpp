@@ -83,16 +83,16 @@
 using namespace std;
 
 void recur(int i,int lim){
-    
-        if(i<1){
-            return ;
+       if(i>lim){
+        return ;
         }
-     recur(i-1,lim);
+
+     recur(i+1,lim);
+      cout<<i<<" ";
      
-        cout<<lim-i+1<<" ";
     }
 int main(){
     int n;
     cin>> n;
-    recur(n,n);
+    recur(1,n);
 }
